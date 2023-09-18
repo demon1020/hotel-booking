@@ -1,0 +1,3 @@
+class HotelsItemModel {String? id = "";
+
+ }

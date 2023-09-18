@@ -1,0 +1,4 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:baburam_s_application5/presentation/booking_name_screen/models/booking_name_model.dart';part 'booking_name_event.dart';part 'booking_name_state.dart';class BookingNameBloc extends Bloc<BookingNameEvent, BookingNameState> {BookingNameBloc(BookingNameState initialState) : super(initialState) { on<BookingNameInitialEvent>(_onInitialize); }
+
+_onInitialize(BookingNameInitialEvent event, Emitter<BookingNameState> emit, ) async  { emit(state.copyWith(statusfilltypedController: TextEditingController(), firstnameController: TextEditingController(), dobController: TextEditingController(), emailController: TextEditingController(), phoneController: TextEditingController())); } 
+ }
