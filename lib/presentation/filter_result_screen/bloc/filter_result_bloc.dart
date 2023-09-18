@@ -1,0 +1,6 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/listsizemediumtypef3_item_model.dart';import '../models/listrectanglefour3_item_model.dart';import 'package:baburam_s_application5/presentation/filter_result_screen/models/filter_result_model.dart';part 'filter_result_event.dart';part 'filter_result_state.dart';class FilterResultBloc extends Bloc<FilterResultEvent, FilterResultState> {FilterResultBloc(FilterResultState initialState) : super(initialState) { on<FilterResultInitialEvent>(_onInitialize); }
+
+List<Listsizemediumtypef3ItemModel> fillListsizemediumtypef3ItemList() { return List.generate(5, (index) => Listsizemediumtypef3ItemModel()); } 
+List<Listrectanglefour3ItemModel> fillListrectanglefour3ItemList() { return List.generate(4, (index) => Listrectanglefour3ItemModel()); } 
+_onInitialize(FilterResultInitialEvent event, Emitter<FilterResultState> emit, ) async  { emit(state.copyWith(searchbarController: TextEditingController())); emit(state.copyWith(filterResultModelObj: state.filterResultModelObj?.copyWith(listsizemediumtypef3ItemList: fillListsizemediumtypef3ItemList(), listrectanglefour3ItemList: fillListrectanglefour3ItemList()))); } 
+ }
